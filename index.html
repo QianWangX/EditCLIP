@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="EditCLIP: Representation Learning for Image Editing">
+  <meta name="keywords" content="CLIP, Diffusion, Image Editing">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EditCLIP: Representation Learning for Image Editing</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">EditCLIP: Representation Learning for Image Editing</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Qian Wang,</span>
+            <span class="author-block">
+              Aleksandar Cvejić,</span>
+            <span class="author-block">
+              Abdelrahman Eldesokey,</span>
+            <span class="author-block">
+              Peter Wonka
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">KAUST</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!--
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2405.16947"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            -->
+
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/QianWangX/EditCLIP"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+
+        <div class="content has-text-justified">
+            <img src="./static/images/teaser_editclip.png" alt="Main workflow" style="width:100%">
+            <figcaption>EditCLIP provides a unified representation of image edits by encoding the transformation between an image and its edited
+                counterpart within the CLIP space. We demonstrate the effectiveness of EditCLIP embeddings in exemplar-based image editing and
+                automated evaluation of image editing pipelines, where it achieves better alignment with human assessment.
+            </figcaption>
+          </div>
+
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+
+          <p>
+            We introduce EditCLIP, a novel representation-learning approach for image editing.  
+            Our method learns a unified representation of edits by jointly encoding an input image and its edited counterpart, effectively capturing their transformation.  
+            To evaluate its effectiveness, we employ EditCLIP to solve two tasks: exemplar-based image editing and automated edit evaluation.  
+            In exemplar-based image editing, we replace text-based instructions in InstructPix2Pix with EditCLIP embeddings computed from a reference exemplar image pair.  
+            Experiments demonstrate that our approach outperforms state-of-the-art methods while being more efficient and versatile.  
+            For automated evaluation, EditCLIP assesses image edits by measuring the similarity between the EditCLIP embedding of a given image pair and either a textual editing instruction or the EditCLIP embedding of another reference image pair.  
+            Experiments show that EditCLIP aligns more closely with human judgments than existing CLIP-based metrics, providing a reliable measure of edit quality and structural preservation.
+        </p>
+        </div>
+
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <img src="./static/images/method_editclip.png" alt="Main workflow" style="width:100%">
+          <figcaption>An overview of our proposed approach. EditCLIP is pre-trained similarly to CLIP, but the visual encoder processes a concatenated exemplar image pair. 
+            After pre-training, EditCLIP can replace the text encoder in InstructPix2Pix to enable exemplar-based editing. 
+          </figcaption>
+        </div>
+
+        <h2 class="title is-3">Exemplar-based image editing results</h2>
+        <div class="content has-text-justified">
+          <img src="./static/images/results_editclip.png" alt="Main workflow" style="width:100%">
+          <figcaption>Here we show the visualization comparison of exemplar-based image editing between our method and baselines.
+            Our method can precisely capture the transformation of the exemplar image pair and edit the region of interest.
+          </figcaption>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column is-8">
+              <div class="content">
+                <p>
+                  This website is licensed under a <a rel="license"
+                                                      href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                  Commons Attribution-ShareAlike 4.0 International License</a>.
+                </p>
+                <p>
+                  We thank <a
+                    href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> to provide the source code of the template.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+
+</body>
+</html>
