@@ -1,5 +1,6 @@
 # 🖼️ EditCLIP: Representation Learning for Image Editing
 
+:rocket: [Project page](https://qianwangx.github.io/EditCLIP/)
 ![Teaser](./assets/teaser_editclip.png)
 
 This is the implementation of paper **EditCLIP: Representation Learning for Image Editing**. 
