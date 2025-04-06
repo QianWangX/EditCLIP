@@ -1,5 +1,5 @@
 # 🖼️ EditCLIP: Representation Learning for Image Editing
-
+[![arXiv](https://img.shields.io/badge/arXiv-<2503.20318>-<COLOR>.svg)](https://arxiv.org/abs/2503.20318)
 :rocket: [Project page](https://qianwangx.github.io/EditCLIP/)
 ![Teaser](./assets/teaser_editclip.png)
 
